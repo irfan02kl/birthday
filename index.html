@@ -374,6 +374,31 @@
                     code, just for you.</footer>
             </div>
            <script>
+                document.getElementById('confetti-btn').addEventListener('click', function() {
+    
+    // 1. Pazhaya wrapper-um button-um hide aakkunnu
+    document.getElementById('step5-wrapper').style.display = 'none';
+    this.style.display = 'none';
+
+    // 2. Aa transparent box (Glass effect) remove aakkunnu
+    const mainBox = document.getElementById('step5');
+    if(mainBox) {
+        mainBox.style.background = 'none';
+        mainBox.style.border = 'none';
+        mainBox.style.boxShadow = 'none';
+        mainBox.style.backdropFilter = 'none';
+    }
+
+    // 3. ITHU MUKHYAM: Surprise kaanikkaan ulla line
+    document.getElementById('surprise-container').style.display = 'block';
+
+    // 4. Audio Play
+    var audio = document.getElementById('bday-music');
+    if(audio) audio.play();
+
+    // 5. Confetti call cheyyaam
+    if (typeof confetti === "function") confetti();
+});
         const confettiBtn = document.getElementById('confetti-btn');
         confettiBtn.addEventListener('click', function() {
             // Background image change cheyyunnu
