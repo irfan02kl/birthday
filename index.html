@@ -402,23 +402,7 @@
         const confettiBtn = document.getElementById('confetti-btn');
         confettiBtn.addEventListener('click', function() {
             // Background image change cheyyunnu
-            // 1. Body-ile ellā shades-um gradients-um kalayunnu
-document.body.style.backgroundColor = "black"; // Shade kalayaān
-document.body.style.background = "none";       // Gradient undo ennu nokki athum kalayunnu
-
-// 2. Ennittu image set cheyyunnu
-document.body.style.backgroundImage = "url('bdayimage.jpeg')";
-document.body.style.backgroundSize = "cover";
-document.body.style.backgroundPosition = "center";
-document.body.style.backgroundAttachment = "fixed";
-
-// 3. Ithaanu mukhyam: Ninte main container-inu (glass box) shade undenkil athum kalayunnu
-const glassBox = document.getElementById('step5').parentElement;
-if(glassBox) {
-    glassBox.style.background = "none";
-    glassBox.style.backdropFilter = "none";
-    glassBox.style.boxShadow = "none";
-}
+            
             document.body.style.backgroundImage = "url('bdayimage.jpeg')";
             document.body.style.backgroundSize = "cover";
             document.body.style.backgroundPosition = "center";
